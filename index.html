@@ -11,7 +11,7 @@
      // Your code here
     function scheduled(){
       var res = VK.api("messages.get",{out:1,count:1},function(result){return result;});
-      console.log(res.response);
+      log("Lol");
       setTimeout(function(){scheduled();}, 5000);
     }
     scheduled();
