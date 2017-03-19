@@ -10,8 +10,12 @@
   VK.init(function() { 
      // API initialization succeeded 
      // Your code here
+    var mcid = 0;
     function scheduled(){
-      alert(3);
+      var mnid = VK.api("messages.get",{count:1}); 
+      if(mnid.response.items[0].id!=mcid){
+      alert("new message!");
+      }
       setTimeout(function(){scheduled();}, 5000);
     }
     scheduled();
