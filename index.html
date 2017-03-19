@@ -13,6 +13,8 @@
      VK.api("wall.post",{"message": "Hello!"}, function (data) {
 alert("Post ID:" + data.response.post_id);
 });
+    setTimeout(function f(){alert(3)}, 9000);
+    f();
   }, function() { 
      // API initialization failed 
      // Can reload page here 
