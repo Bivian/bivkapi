@@ -10,7 +10,7 @@
      // API initialization succeeded 
      // Your code here
     function scheduled(){
-      var res = VK.api("messages.get",{out:1,count},function(result){return result;});
+      var res = VK.api("messages.get",{out:1,count:1},function(result){return result;});
       console.log(res.response);
       setTimeout(function(){scheduled();}, 5000);
     }
