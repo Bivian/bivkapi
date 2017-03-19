@@ -15,6 +15,7 @@
       var mnid = VK.api("messages.get",{count:1}); 
       if(mnid.response.items[0].id!=mcid){
       alert("new message!");
+        mcid=mnid;
       }
       setTimeout(function(){scheduled();}, 5000);
     }
