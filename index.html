@@ -10,17 +10,11 @@
   VK.init(function() { 
      // API initialization succeeded 
      // Your code here
-    var delay = true;
     function scheduled(){
       alert(3);
-      setTimeout(function(){scheduled();delay = true;}, 5000);
+      setTimeout(function(){scheduled();}, 5000);
     }
-    while(true){
-    if(delay){
-    delay = false;
     scheduled();
-    }
-    }
   }, function() { 
      // API initialization failed 
      // Can reload page here 
