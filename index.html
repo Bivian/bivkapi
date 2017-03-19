@@ -12,12 +12,13 @@
      // Your code here
     var delay = true;
     function scheduled(){
-    alert(3);
+      alert(3);
+      setTimeout(function(){scheduled();delay = true;}, 5000);
     }
     while(true){
     if(delay){
     delay = false;
-    setTimeout(function(){scheduled();delay = true;}, 5000);
+    scheduled();
     }
     }
   }, function() { 
