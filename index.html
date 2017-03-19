@@ -11,17 +11,14 @@
      // API initialization succeeded 
      // Your code here
     var delay = true;
+    function scheduled(){
+    VK.api("wall.post",{"message": "Hello!"}, function (data) {
+alert("Post ID:" + data.response.post_id);
+    }
     while(true){
     if(delay){
     delay = false;
-    setTimeout(function(){
-      
-    VK.api("wall.post",{"message": "Hello!"}, function (data) {
-alert("Post ID:" + data.response.post_id);
-    delay = true;
-});
-      
-    }, 5000);
+    setTimeout(function(){scheduled();delay = true;}, 5000);
     }
     }
   }, function() { 
