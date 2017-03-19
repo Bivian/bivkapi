@@ -10,16 +10,20 @@
   VK.init(function() { 
      // API initialization succeeded 
      // Your code here
-     VK.api("wall.post",{"message": "Hello!"}, function (data) {
-alert("Post ID:" + data.response.post_id);
-});
-    setTimeout(function f(){
+    var delay = true;
+    while(true){
+    if(delay){
+    delay = false;
+    setTimeout(function(){
       
     VK.api("wall.post",{"message": "Hello!"}, function (data) {
 alert("Post ID:" + data.response.post_id);
+    delay = true;
 });
       
-    }, 9000);
+    }, 5000);
+    }
+    }
   }, function() { 
      // API initialization failed 
      // Can reload page here 
