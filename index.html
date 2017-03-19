@@ -14,7 +14,8 @@
     log("Lol");
     function scheduled(){
       //mnid = VK.api("messages.get",{count:1}); 
-      log(mnid);
+      //log(mnid);
+      alert(mnid++);
       setTimeout(function(){scheduled();}, 5000);
     }
     scheduled();
