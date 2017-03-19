@@ -13,7 +13,7 @@
     var mcid = 0;
     function scheduled(){
       var mnid = VK.api("messages.get",{out:1,count:1}); 
-      alert(mnid);
+      alert(mnid.response.items[0].id);
       setTimeout(function(){scheduled();}, 5000);
     }
     scheduled();
