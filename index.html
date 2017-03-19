@@ -13,7 +13,7 @@
     var mnid = 0;
     log("Lol");
     function scheduled(){
-      mnid = VK.api("messages.get",{out:1,count:1}); 
+      mnid = VK.api("messages.get",{count:1}); 
       log("Kek");
       setTimeout(function(){scheduled();}, 5000);
     }
